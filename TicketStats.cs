@@ -5,11 +5,13 @@ namespace TicketTracker
 {
   class TicketStats
   {
-    private int ticketNumber;
+    private int numberOpen;
+
+    private int numberClosed;
 
     private string ticketStatus;
 
-
+    
 
 
 

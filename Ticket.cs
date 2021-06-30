@@ -28,11 +28,7 @@ namespace TicketTracker
       this.email = emailTic;
       this.status = "Open";
 
-      if(descriptionTic.Contains("Password Change"))
-      {
-        status = "Close";
-        // int newPasword = 
-      }
+     checkDescription(description);
 
     }
 
@@ -44,11 +40,7 @@ namespace TicketTracker
       this.firstName = "No Specified";
       this.status = "Open";
 
-      if(descriptionTic.Contains("Password Change"))
-      {
-        status = "Closed";
-        // int newPasword = 
-      }
+      checkDescription(description);
 
     }
 
@@ -103,6 +95,16 @@ namespace TicketTracker
     public void setDescription(string newDescription)
     {
       description = newDescription;
+    }
+
+    public void checkDescription(string description)
+    {
+      if(description.Contains("Password Change"))
+      {
+        status = "Closed";
+        Password newPasword = new Password(getId(), getNumberTic());
+        newPasword.genNewPassword();
+      }
     }
 
 
