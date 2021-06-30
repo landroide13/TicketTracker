@@ -1,0 +1,11 @@
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/bin/Debug/netcoreapp2.1/TicketTracker.deps.json
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/bin/Debug/netcoreapp2.1/TicketTracker.runtimeconfig.json
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/bin/Debug/netcoreapp2.1/TicketTracker.runtimeconfig.dev.json
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/bin/Debug/netcoreapp2.1/TicketTracker.dll
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/bin/Debug/netcoreapp2.1/TicketTracker.pdb
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.csprojAssemblyReference.cache
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.csproj.CoreCompileInputs.cache
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.AssemblyInfoInputs.cache
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.AssemblyInfo.cs
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.dll
+/Users/landrade/Desktop/Whitecleffe/ProgrammingFundamentals/Assign2/TicketTracker/obj/Debug/netcoreapp2.1/TicketTracker.pdb

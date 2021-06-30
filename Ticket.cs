@@ -42,7 +42,8 @@ namespace TicketTracker
       return stuffId;
     }
 
-    public int getNumberTic(){
+    public int getNumberTic()
+    {
       return ticId;
     }
 
@@ -87,7 +88,9 @@ namespace TicketTracker
       description = newDescription;
     }
 
-
+    public string getStuffId(){
+      return stuffId;
+    }
 
 
 
