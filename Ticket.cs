@@ -17,16 +17,23 @@ namespace TicketTracker
       return firstName + surname[0];
     }
 
-    public Ticket(string firstName, string surName, string statusTic, string emailTic, string descriptionTic)
+    public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {
       ticId++;
       this.ticId = ticNum;
       this.firstName = firstName;
       this.surName = surName;
       this.stuffId = setStuffId(firstName, surName);
-      this.status = statusTic;
       this.description = descriptionTic;
       this.email = emailTic;
+      this.status = "Open";
+
+      if(descriptionTic.Contains("Password Change"))
+      {
+        status = "Close";
+        // int newPasword = 
+      }
+
     }
 
     public Ticket(string descriptionTic)
@@ -35,7 +42,17 @@ namespace TicketTracker
       this.description = descriptionTic;
       this.email = "No Specified";
       this.firstName = "No Specified";
+      this.status = "Open";
+
+      if(descriptionTic.Contains("Password Change"))
+      {
+        status = "Closed";
+        // int newPasword = 
+      }
+
     }
+
+    
 
     public string getId()
     {
@@ -86,10 +103,6 @@ namespace TicketTracker
     public void setDescription(string newDescription)
     {
       description = newDescription;
-    }
-
-    public string getStuffId(){
-      return stuffId;
     }
 
 
