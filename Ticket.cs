@@ -94,11 +94,13 @@ namespace TicketTracker
       description = newDescription;
     }
 
-    public void setResponse(string res){
+    public void setResponse(string res)
+    {
       this.response = res;
     }
 
-    public string getResponse(){
+    public string getResponse()
+    {
       return response;
     }
 
