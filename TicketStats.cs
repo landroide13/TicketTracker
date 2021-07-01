@@ -1,13 +1,17 @@
 using System;
+using System.Collections.Generic;
 
 
 namespace TicketTracker
 {
   class TicketStats
   {
-    private int numberOpen;
+    private int ticketsOpen;
 
-    private int numberClosed;
+    private int ticketsClosed;
+    static int numberOpen = 0;
+
+    static int numberClosed = 0;
 
     private string ticketStatus;
 

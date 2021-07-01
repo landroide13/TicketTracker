@@ -28,7 +28,7 @@ namespace TicketTracker
       this.email = emailTic;
       this.status = "Open";
 
-     checkDescription(description);
+     checkDescription(descriptionTic);
 
     }
 
@@ -40,11 +40,9 @@ namespace TicketTracker
       this.firstName = "No Specified";
       this.status = "Open";
 
-      checkDescription(description);
+      checkDescription(descriptionTic);
 
     }
-
-    
 
     public string getId()
     {

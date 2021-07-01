@@ -9,11 +9,12 @@ namespace TicketTracker
             Console.WriteLine("Welcome Ticket Tracker");
             Ticket t1 = new Ticket("Not working");
             // Console.WriteLine(t1.getDescription());
-            Ticket t2 = new Ticket("Eltro", "Lazo", "eltro@nz.co", "Password Change");
+            Ticket t2 = new Ticket("Eltro", "Lazo", "eltro@nz.co", "Monitor not working");
             Console.WriteLine(t2.getStatus());
             Console.WriteLine(t2.getId());
             Console.WriteLine(t2.getName());
             Console.WriteLine(t2.getDescription());
+            Console.WriteLine(t2.getStatus());
         }
     }
 }
