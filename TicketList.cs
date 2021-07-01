@@ -5,6 +5,9 @@ namespace TicketTracker
 {
 
   class TicketList{
+
+    public TicketList(){}
+
     
   }
 

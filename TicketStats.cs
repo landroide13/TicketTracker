@@ -17,7 +17,9 @@ namespace TicketTracker
     static int numberReop = 0;
 
     public TicketStats(){
-      
+      numberOpen = 0;
+      numberClosed = 0;
+      numberReop = 0;
     }
 
 
