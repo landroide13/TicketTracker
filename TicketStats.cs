@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 
 namespace TicketTracker
@@ -9,11 +8,20 @@ namespace TicketTracker
     private int ticketsOpen;
 
     private int ticketsClosed;
+
+    private int ticketReop;
     static int numberOpen = 0;
 
     static int numberClosed = 0;
 
-    private string ticketStatus;
+    static int numberReop = 0;
+
+    public TicketStats(){
+      
+    }
+
+
+
 
     
 
