@@ -12,7 +12,9 @@ namespace TicketTracker
     private string surName;
     private string email;
     private string description;
-   
+
+    private string response = "Not Yet Provided";
+
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {
@@ -26,7 +28,6 @@ namespace TicketTracker
       this.status = "Open";
 
      checkDescription(descriptionTic);
-
     }
 
     public Ticket(string descriptionTic)
@@ -40,7 +41,6 @@ namespace TicketTracker
       this.status = "Open";
 
       checkDescription(descriptionTic);
-
     }
 
     public string getId()
@@ -92,6 +92,14 @@ namespace TicketTracker
     public void setDescription(string newDescription)
     {
       description = newDescription;
+    }
+
+    public void setResponse(string res){
+      this.response = res;
+    }
+
+    public string getResponse(){
+      return response;
     }
 
     public void checkDescription(string description)

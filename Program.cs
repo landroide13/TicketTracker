@@ -68,7 +68,9 @@ namespace TicketTracker
                 }
 
                 tikList.Add(newTicket);
-                Console.WriteLine("Tickets Created !! ");
+                Console.WriteLine("Ticket Created !! ");
+
+                
                 getList(tikList);
 
 

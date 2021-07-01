@@ -2,15 +2,11 @@ using System;
 
 namespace TicketTracker
 {
-
   class Password
   {
     private string staffId;
-
     private int ticketNumber;
-
     private string timestamp;
-
     public Password()
     {
       this.staffId = "";
@@ -30,7 +26,7 @@ namespace TicketTracker
       string pass1 = staffId.Substring(0,2);
       string pass2 = ticketNumber.ToString("X");
 
-      string timeS = timestamp.Substring(0, 2) + timestamp[3];
+      string timeS = timestamp.Substring(0,2) + timestamp[3];
       int numberT = Convert.ToInt32(timeS);
       string pass3Hex = numberT.ToString("X");
 
