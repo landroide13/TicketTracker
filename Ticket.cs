@@ -12,10 +12,7 @@ namespace TicketTracker
     private string surName;
     private string email;
     private string description;
-    // public string setStuffId(string firstName, string surname)
-    // {
-    //   return firstName + surname[0];
-    // }
+   
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {

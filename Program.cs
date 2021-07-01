@@ -1,30 +1,30 @@
 ﻿using System;
-// using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace TicketTracker
 {
     class Program
     {
-
-        static object setTicket1(string firstName, string surName, string email, string desc)
+        static void closing(string answer)
         {
-          Ticket newT = new Ticket(firstName, surName, email, desc);
-          return newT;
+            if(answer != "yes")
+                {
+                  Console.WriteLine("Have a Good day !!");
+                }
+                else
+                {
+                  Console.WriteLine("Lets Continue..");  
+                }
         }
-        
-        static object setTicket2(string desc)
-        {
-          Ticket newT = new Ticket(desc);
-          return newT;
-        }
-
         static void starter()
         {
             string answer = "";
+            List<Ticket> tikList = new List<Ticket>();
             while(answer != "no")
             {
                 Console.WriteLine("Are you able to share your personal details(yes/no) ??");
                 string details = Console.ReadLine();
+                Ticket newTicket;
                 if(details == "yes")
                 {
                     Console.WriteLine("Please Enter your first name");
@@ -36,24 +36,30 @@ namespace TicketTracker
                     Console.WriteLine("Please Describe your problem(This field is compolsory");
                     string desc = Console.ReadLine();
 
-                    object newTicket = setTicket1(firstName, surName, email, desc);
+                    newTicket = new Ticket(firstName, surName, email, desc);
                 }
                 else
                 {
-                    Console.WriteLine("Please Describe your problem(This field is compolsory");
+                    Console.WriteLine("Please Describe your problem(This field is compolsory)");
                     string desc = Console.ReadLine();
 
-                    object newTicket = setTicket2(desc);
+                    newTicket = new Ticket(desc);
+                }
+
+                tikList.Add(newTicket);
+                Console.WriteLine("Tickets Created: " + tikList.Count);
+                foreach(Ticket tk in tikList)
+                {
+                    string description = tk.getDescription();
+                    Console.WriteLine("The description of the problem is: " + description);
                 }
 
 
-                
-
-                
 
                 Console.WriteLine("Do you want to continue ??(yes/no)");
                 answer = Console.ReadLine();
-                Console.WriteLine("Have a Good day !!");
+                closing(answer);
+
             }
         }
 
@@ -66,3 +72,17 @@ namespace TicketTracker
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
