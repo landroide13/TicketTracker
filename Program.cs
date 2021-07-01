@@ -26,12 +26,14 @@ namespace TicketTracker
                 string name = tk.getName();
                 string email = tk.getEmail();
                 string description = tk.getDescription();
+                string status = tk.getStatus();
                 Console.WriteLine("####################################################");
                 Console.WriteLine("The ticket Number: " + number);
                 Console.WriteLine("The Creator is: " + name);
                 Console.WriteLine("The StuffId: " + stuffId);
                 Console.WriteLine("The Email is: " + email);
                 Console.WriteLine("The description of the problem is: " + description);
+                Console.WriteLine("The Ticket status is: " + status);
                 Console.WriteLine("####################################################");
             }
         }
