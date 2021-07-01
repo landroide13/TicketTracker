@@ -16,7 +16,7 @@ namespace TicketTracker
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {
-      ticId++;
+      ticNum++;
       this.ticId = ticNum;
       this.firstName = firstName;
       this.surName = surName;
@@ -31,6 +31,8 @@ namespace TicketTracker
 
     public Ticket(string descriptionTic)
     {
+      ticNum++;
+      this.ticId = ticNum;
       this.stuffId = "No Specified";
       this.description = descriptionTic;
       this.email = "No Specified";

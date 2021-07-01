@@ -7,14 +7,33 @@ namespace TicketTracker
     {
         static void closing(string answer)
         {
-            if(answer != "yes")
-                {
-                  Console.WriteLine("Have a Good day !!");
-                }
-                else
-                {
-                  Console.WriteLine("Lets Continue..");  
-                }
+          if(answer != "yes")
+          {
+            Console.WriteLine("Have a Good day !!");
+          }
+          else
+          {
+            Console.WriteLine("Lets Continue..");  
+          }
+        }
+
+        static void getList(List<Ticket> tiL)
+        {
+          foreach(Ticket tk in tiL)
+            {
+                int number = tk.getNumberTic();
+                string stuffId = tk.getId();
+                string name = tk.getName();
+                string email = tk.getEmail();
+                string description = tk.getDescription();
+                Console.WriteLine("####################################################");
+                Console.WriteLine("The ticket Number: " + number);
+                Console.WriteLine("The Creator is: " + name);
+                Console.WriteLine("The StuffId: " + stuffId);
+                Console.WriteLine("The Email is: " + email);
+                Console.WriteLine("The description of the problem is: " + description);
+                Console.WriteLine("####################################################");
+            }
         }
         static void starter()
         {
@@ -29,11 +48,11 @@ namespace TicketTracker
                 {
                     Console.WriteLine("Please Enter your first name");
                     string firstName = Console.ReadLine();
-                    Console.WriteLine("Please Enter your first sure name");
+                    Console.WriteLine("Please Enter your surename");
                     string surName = Console.ReadLine();    
                     Console.WriteLine("Please Enter your email");
                     string email = Console.ReadLine();
-                    Console.WriteLine("Please Describe your problem(This field is compolsory");
+                    Console.WriteLine("Please Describe your problem(This field is compolsory)");
                     string desc = Console.ReadLine();
 
                     newTicket = new Ticket(firstName, surName, email, desc);
@@ -47,12 +66,8 @@ namespace TicketTracker
                 }
 
                 tikList.Add(newTicket);
-                Console.WriteLine("Tickets Created: " + tikList.Count);
-                foreach(Ticket tk in tikList)
-                {
-                    string description = tk.getDescription();
-                    Console.WriteLine("The description of the problem is: " + description);
-                }
+                Console.WriteLine("Tickets Created !! ");
+                getList(tikList);
 
 
 
@@ -62,7 +77,6 @@ namespace TicketTracker
 
             }
         }
-
         static void Main(string[] args)
         {
             Console.WriteLine("######################");
