@@ -12,10 +12,10 @@ namespace TicketTracker
     private string surName;
     private string email;
     private string description;
-    public string setStuffId(string firstName, string surname)
-    {
-      return firstName + surname[0];
-    }
+    // public string setStuffId(string firstName, string surname)
+    // {
+    //   return firstName + surname[0];
+    // }
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {
@@ -23,7 +23,7 @@ namespace TicketTracker
       this.ticId = ticNum;
       this.firstName = firstName;
       this.surName = surName;
-      this.stuffId = setStuffId(firstName, surName);
+      this.stuffId = firstName + surName[0];
       this.description = descriptionTic;
       this.email = emailTic;
       this.status = "Open";
