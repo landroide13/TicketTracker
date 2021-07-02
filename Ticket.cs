@@ -12,9 +12,7 @@ namespace TicketTracker
     private string surName;
     private string email;
     private string description;
-
     private string response;
-
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
     {

@@ -17,6 +17,19 @@ namespace TicketTracker
           }
         }
 
+        static void displayStats(List<Ticket> li)
+        {
+            TicketStats open = new TicketStats();
+            TicketStats close = new TicketStats();
+            TicketStats reopen = new TicketStats();
+
+            Console.WriteLine("##############################################################################");
+            Console.WriteLine("Tickets Open: " + open.getTicketOpen(li));
+            Console.WriteLine("Tickets Close: " + close.getTicketClosed(li));
+            Console.WriteLine("Tickets Reopen: " + reopen.getTicketReopen(li));
+            Console.WriteLine("##############################################################################");
+        }
+
         static void options(List<Ticket> li)
         {
           Console.WriteLine("##############################################################################");
@@ -27,14 +40,17 @@ namespace TicketTracker
           if(choice == "A")
           {
             getList(li);    
-          }else if(choice == "B"){
-             getList(li); 
-          }else{
-             getList(li); 
+          }
+          else if(choice == "B")
+          {
+            displayStats(li); 
+          }else
+          {
+            getList(li); 
           }
         }
 
-        static void getList(List<Ticket> tiL)
+        static void getList(List<Ticket> tiL) //Iterate the List.
         {
           foreach(Ticket tk in tiL)
             {
@@ -57,7 +73,7 @@ namespace TicketTracker
         static void starter()
         {
             string answer = "";
-            List<Ticket> tikList = new List<Ticket>();
+            List<Ticket> tikList = new List<Ticket>();// Creates a new List
             while(answer != "no")
             {
                 Console.WriteLine("Are you able to share your personal details(yes/no) ??");
@@ -87,11 +103,10 @@ namespace TicketTracker
                 tikList.Add(newTicket);
                 Console.WriteLine("Ticket Created !! ");
 
-
-                // getList(tikList);
+                // Options Functions
                 options(tikList);
 
-
+                //Good Bye
                 Console.WriteLine("Do you want to continue ??(yes/no)");
                 answer = Console.ReadLine();
                 closing(answer);
