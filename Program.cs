@@ -19,14 +19,14 @@ namespace TicketTracker
 
         static void displayStats(List<Ticket> li)
         {
-            TicketStats open = new TicketStats();
-            TicketStats close = new TicketStats();
-            TicketStats reopen = new TicketStats();
+            TicketStats cre = new TicketStats();
+            TicketStats toSo = new TicketStats();
+            TicketStats sol = new TicketStats();
 
             Console.WriteLine("#############################################################################################################");
-            Console.WriteLine("Tickets Open: " + open.getTicketOpen(li));
-            Console.WriteLine("Tickets Close: " + close.getTicketClosed(li));
-            Console.WriteLine("Tickets Reopen: " + reopen.getTicketReopen(li));
+            Console.WriteLine("Tickets Created: " + cre.getCreatedTi(li));
+            Console.WriteLine("Tickets to Solve: " + toSo.getToSolve(li));
+            Console.WriteLine("Solved Tickets: " + sol.getSolved(li));
             Console.WriteLine("##############################################################################################################");
         }
 
@@ -39,6 +39,7 @@ namespace TicketTracker
           Console.WriteLine("###############################################################################################################");
           if(choice == "A")
           {
+            Console.WriteLine("Displaying Tickets");
             getList(li);    
           }
           else if(choice == "B")
@@ -78,12 +79,13 @@ namespace TicketTracker
             List<Ticket> tikList = new List<Ticket>();// Creates a new List
             while(answer != "no")
             {
+                Console.WriteLine("############################################################");
                 Console.WriteLine("########### Lets Generate a Tickets #######################");
                 Console.WriteLine("############################################################");
                 Console.WriteLine("Are you able to share your personal details(yes/no) ??");
                 string details = Console.ReadLine();
                 Console.WriteLine("##############################################################");
-                Ticket newTicket;
+                Ticket newTicket;// New Ticket Created
                 if(details == "yes")
                 {
                     Console.WriteLine("Please Enter your first name");
@@ -115,14 +117,13 @@ namespace TicketTracker
                 Console.WriteLine("Do you want to continue ??(yes/no)");
                 answer = Console.ReadLine();
                 closing(answer);
-
             }
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("######################");
-            Console.WriteLine("Welcome Ticket Tracker");
-            Console.WriteLine("######################");
+            Console.WriteLine("############################################################");
+            Console.WriteLine("############### Welcome Ticket Tracker #####################");
+            Console.WriteLine("############################################################");
             starter();
         }
     }

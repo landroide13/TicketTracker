@@ -17,26 +17,28 @@ namespace TicketTracker
 
     public int getTicketClosed(List<Ticket> list)
     {
-      int ticketsClose = 0;
+      // int ticketsClose = 0;
       
       foreach(Ticket tk in list)
       {
         if(tk.getStatus() == "Closed")
         {
-          ticketsClose++;
+          ticketsClosed++;
+          numberOpen--;
         }
       }
-      return ticketsClose;
+      return ticketsClosed;
     }
 
     public int getTicketOpen(List<Ticket> list)
     {
-      int ticketsOpen = 0;
+      // int ticketsOpen = 0;
       foreach(Ticket tk in list)
       {
         if(tk.getStatus() == "Open")
         {
           ticketsOpen++;
+          
         }
       }
       return ticketsOpen;
@@ -45,15 +47,51 @@ namespace TicketTracker
     public int getTicketReopen(List<Ticket> list)
     {
       int ticketsReopen = 0;
+
       foreach(Ticket tk in list)
       {
         if(tk.getStatus() == "Reopen")
         {
-          ticketsReopen++;
+          ticketsOpen++;
+          numberClosed--;
+          numberReop++;
         }
       }
       return ticketsReopen;
     }
+
+    public int getSolved(List<Ticket> list)
+    {
+      int solved = 0;
+      foreach(Ticket tk in list)
+      {
+        if(tk.getStatus() == "Close")
+        {
+          solved++;
+        }
+      }
+      return solved;
+    }
+
+    public int getToSolve(List<Ticket> list)
+    {
+      int solve = 0;
+      foreach(Ticket tk in list)
+      {
+        if(tk.getStatus() == "Open")
+        {
+          solve++;
+        }
+      }
+      return solve;
+    }
+
+    public int getCreatedTi(List<Ticket> list)
+    {
+      return list.Count;
+    }
+
+
 
     
 

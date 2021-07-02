@@ -108,7 +108,7 @@ namespace TicketTracker
     {
       if(description.Contains("Password Change"))
       {
-        status = "Closed";
+        status = "Close";
         Password newPasword = new Password(getId(), getNumberTic());
         string newP = newPasword.genNewPassword();
         response = $"Password Change: {newP}";
