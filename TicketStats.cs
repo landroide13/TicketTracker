@@ -18,6 +18,7 @@ namespace TicketTracker
     public int getTicketClosed(List<Ticket> list)
     {
       int ticketsClose = 0;
+      
       foreach(Ticket tk in list)
       {
         if(tk.getStatus() == "Closed")

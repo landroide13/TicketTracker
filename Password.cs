@@ -26,10 +26,10 @@ namespace TicketTracker
       string pass1 = staffId.Substring(0,2);
       string pass2 = ticketNumber.ToString("X");
 
-      string timeS = timestamp.Substring(0,2) + timestamp[3];
-      int numberT = Convert.ToInt32(timeS);
+      string timeS1 = timestamp.Substring(0, 1) + timestamp[2];
+      
+      int numberT = Convert.ToInt32(timeS1);
       string pass3Hex = numberT.ToString("X");
-
       string newPass = pass1 + pass2 + pass3Hex;
       Console.WriteLine("New Password: " + newPass);
       return newPass;
