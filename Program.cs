@@ -23,20 +23,20 @@ namespace TicketTracker
             TicketStats close = new TicketStats();
             TicketStats reopen = new TicketStats();
 
-            Console.WriteLine("##############################################################################");
+            Console.WriteLine("#############################################################################################################");
             Console.WriteLine("Tickets Open: " + open.getTicketOpen(li));
             Console.WriteLine("Tickets Close: " + close.getTicketClosed(li));
             Console.WriteLine("Tickets Reopen: " + reopen.getTicketReopen(li));
-            Console.WriteLine("##############################################################################");
+            Console.WriteLine("##############################################################################################################");
         }
 
         static void options(List<Ticket> li)
         {
-          Console.WriteLine("##############################################################################");
-          Console.WriteLine("Would tou like display all the tickest(option A) ,  Check the stats(option B), Generated a new Ticket(option C");
-          Console.WriteLine("##############################################################################");
+          Console.WriteLine("###############################################################################################################");
+          Console.WriteLine("Would you like display all the tickest(option A) ,  Check the stats(option B), Generated a new Ticket(option C");
+          Console.WriteLine("###############################################################################################################");
           string choice = Console.ReadLine();
-          Console.WriteLine("##############################################################################");
+          Console.WriteLine("###############################################################################################################");
           if(choice == "A")
           {
             getList(li);    
@@ -60,14 +60,16 @@ namespace TicketTracker
                 string email = tk.getEmail();
                 string description = tk.getDescription();
                 string status = tk.getStatus();
-                Console.WriteLine("####################################################");
+                string response = tk.getResponse();
+                Console.WriteLine("############################################################");
                 Console.WriteLine("The ticket Number: " + number);
                 Console.WriteLine("The Creator is: " + name);
                 Console.WriteLine("The StuffId: " + stuffId);
                 Console.WriteLine("The Email is: " + email);
                 Console.WriteLine("The description of the problem is: " + description);
+                Console.WriteLine("The Response: " + response);
                 Console.WriteLine("The Ticket status is: " + status);
-                Console.WriteLine("####################################################");
+                Console.WriteLine("#############################################################");
             }
         }
         static void starter()
@@ -76,8 +78,11 @@ namespace TicketTracker
             List<Ticket> tikList = new List<Ticket>();// Creates a new List
             while(answer != "no")
             {
+                Console.WriteLine("########### Lets Generate a Tickets #######################");
+                Console.WriteLine("############################################################");
                 Console.WriteLine("Are you able to share your personal details(yes/no) ??");
                 string details = Console.ReadLine();
+                Console.WriteLine("##############################################################");
                 Ticket newTicket;
                 if(details == "yes")
                 {

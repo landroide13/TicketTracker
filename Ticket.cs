@@ -110,7 +110,8 @@ namespace TicketTracker
       {
         status = "Closed";
         Password newPasword = new Password(getId(), getNumberTic());
-        newPasword.genNewPassword();
+        string newP = newPasword.genNewPassword();
+        response = $"Password Change: {newP}";
       }
     }
 

@@ -31,9 +31,8 @@ namespace TicketTracker
       int numberT = Convert.ToInt32(timeS1);
       string pass3Hex = numberT.ToString("X");
       string newPass = pass1 + pass2 + pass3Hex;
-      Console.WriteLine("New Password: " + newPass);
+      // Console.WriteLine("New Password: " + newPass);
       return newPass;
-
     }
 
   }
