@@ -46,7 +46,7 @@ namespace TicketTracker
           {
             Console.WriteLine("Displaying Tickets Stats: ");
             displayStats(li); 
-          }else
+          }else 
           {
             getList(li); 
           }

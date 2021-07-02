@@ -15,51 +15,6 @@ namespace TicketTracker
 
     public TicketStats(){}
 
-    public int getTicketClosed(List<Ticket> list)
-    {
-      // int ticketsClose = 0;
-      
-      foreach(Ticket tk in list)
-      {
-        if(tk.getStatus() == "Closed")
-        {
-          ticketsClosed++;
-          numberOpen--;
-        }
-      }
-      return ticketsClosed;
-    }
-
-    public int getTicketOpen(List<Ticket> list)
-    {
-      // int ticketsOpen = 0;
-      foreach(Ticket tk in list)
-      {
-        if(tk.getStatus() == "Open")
-        {
-          ticketsOpen++;
-          
-        }
-      }
-      return ticketsOpen;
-    }
-
-    public int getTicketReopen(List<Ticket> list)
-    {
-      int ticketsReopen = 0;
-
-      foreach(Ticket tk in list)
-      {
-        if(tk.getStatus() == "Reopen")
-        {
-          ticketsOpen++;
-          numberClosed--;
-          numberReop++;
-        }
-      }
-      return ticketsReopen;
-    }
-
     public int getSolved(List<Ticket> list)
     {
       int solved = 0;
