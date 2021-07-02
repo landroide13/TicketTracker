@@ -13,7 +13,7 @@ namespace TicketTracker
     private string email;
     private string description;
 
-    private string response = "Not Yet Provided";
+    private string response;
 
 
     public Ticket(string firstName, string surName, string emailTic, string descriptionTic)
@@ -24,6 +24,7 @@ namespace TicketTracker
       this.surName = surName;
       this.stuffId = firstName + surName[0];
       this.description = descriptionTic;
+      this.response = "Not Yet Provided";
       this.email = emailTic;
       this.status = "Open";
 
@@ -38,6 +39,7 @@ namespace TicketTracker
       this.description = descriptionTic;
       this.email = "No Specified";
       this.firstName = "No Specified";
+      this.response = "Not Yet Provided";
       this.status = "Open";
 
       checkDescription(descriptionTic);

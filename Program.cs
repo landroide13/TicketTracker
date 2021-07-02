@@ -17,6 +17,23 @@ namespace TicketTracker
           }
         }
 
+        static void options(List<Ticket> li)
+        {
+          Console.WriteLine("##############################################################################");
+          Console.WriteLine("Would tou like display all the tickest(option A) ,  Check the stats(option B), Generated a new Ticket(option C");
+          Console.WriteLine("##############################################################################");
+          string choice = Console.ReadLine();
+          Console.WriteLine("##############################################################################");
+          if(choice == "A")
+          {
+            getList(li);    
+          }else if(choice == "B"){
+             getList(li); 
+          }else{
+             getList(li); 
+          }
+        }
+
         static void getList(List<Ticket> tiL)
         {
           foreach(Ticket tk in tiL)
@@ -70,9 +87,9 @@ namespace TicketTracker
                 tikList.Add(newTicket);
                 Console.WriteLine("Ticket Created !! ");
 
-                
-                getList(tikList);
 
+                // getList(tikList);
+                options(tikList);
 
 
                 Console.WriteLine("Do you want to continue ??(yes/no)");
