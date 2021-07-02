@@ -39,11 +39,12 @@ namespace TicketTracker
           Console.WriteLine("###############################################################################################################");
           if(choice == "A")
           {
-            Console.WriteLine("Displaying Tickets");
+            Console.WriteLine("Printing Tickets: ");
             getList(li);    
           }
           else if(choice == "B")
           {
+            Console.WriteLine("Displaying Tickets Stats: ");
             displayStats(li); 
           }else
           {
